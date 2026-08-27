@@ -8,7 +8,7 @@
   },
   "target": {
     "catalog": "dev_catalog",
-    "schema": "silver",
+    "schema": "gold",
     "table": "customer"
   },
   "processing": {
