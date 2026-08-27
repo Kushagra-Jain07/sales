@@ -1,0 +1,27 @@
+{
+  "pipeline_name": "customer_ingestion4",
+  "environment": "dev",
+  "source": {
+    "type": "adls",
+    "path": "abfss://raw@storageaccount.dfs.core.windows.net/customer/",
+    "format": "json"
+  },
+  "target": {
+    "catalog": "dev_catalog",
+    "schema": "silver",
+    "table": "customer"
+  },
+  "processing": {
+    "load_type": "incremental",
+    "watermark_column": "updated_timestamp",
+    "primary_key": "customer_id"
+  },
+  "schedule": {
+    "frequency": "daily",
+    "start_time": "02:00"
+  },
+  "notifications": {
+    "on_failure": true,
+    "email": "data-engineering@example.com"
+  }
+}
