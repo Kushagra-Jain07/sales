@@ -22,6 +22,6 @@
   },
   "notifications": {
     "on_failure": true,
-    "email": "data-engineering@example.com"
+    "email": "data-engineering@gmail.com"
   }
 }
